@@ -37,7 +37,7 @@ void print_bit_map(uint64_t* fp_bitmap){
     }
 }
 
-Server::Server(Config &config) : dev("mlx5_1", 1, config.gid_idx), ser(dev)
+Server::Server(Config &config) : dev(nullptr, 1, config.gid_idx), ser(dev)
 {
     seg_mr = dev.reg_mr(233, config.mem_size);
     auto [dm, mr] = dev.reg_dmmr(234, dev_mem_size);
@@ -124,7 +124,7 @@ Client::Client(Config &config, ibv_mr *_lmr, rdma_client *_cli, rdma_conn *_conn
 
 Client::~Client()
 {
-    log_err("[%lu:%lu] miss_cnt:%lu", cli_id, coro_id, miss_cnt);
+    // log_err("[%lu:%lu] miss_cnt:%lu", cli_id, coro_id, miss_cnt);
     perf.print(cli_id,coro_id);
     sum_cost.print(cli_id,coro_id);
 }

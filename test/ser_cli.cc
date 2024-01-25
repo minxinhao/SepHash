@@ -171,8 +171,8 @@ int main(int argc, char *argv[])
         uint64_t cbuf_size = (1ul << 20) * 250;
         char *mem_buf = (char *)malloc(cbuf_size * (config.num_cli * config.num_coro + 1));
         // rdma_dev dev("mlx5_1", 1, config.gid_idx);
-        // rdma_dev dev("mlx5_0", 1, config.gid_idx);
-        rdma_dev dev(nullptr, 1, config.gid_idx);
+        rdma_dev dev("mlx5_0", 1, config.gid_idx);
+        // rdma_dev dev(nullptr, 1, config.gid_idx);
         std::vector<ibv_mr *> lmrs(config.num_cli * config.num_coro + 1, nullptr);
         std::vector<rdma_client *> rdma_clis(config.num_cli + 1, nullptr);
         std::vector<rdma_conn *> rdma_conns(config.num_cli + 1, nullptr);

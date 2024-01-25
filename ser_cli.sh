@@ -13,8 +13,7 @@ then
     ./ser_cli --server \
     --gid_idx 1 \
     --max_coro 256 --cq_size 64 \
-    --mem_size 1000000000
-    # --mem_size 91268055040
+    --mem_size 91268055040
 else
     echo "machine" $1
 
@@ -22,7 +21,8 @@ else
         for num_coro in `seq 1 $3`;do
             for load_num in 10000000;do
                 echo "num_cli" $num_cli "num_coro" $num_coro "load_num" $load_num
-                ./ser_cli_var_kv \
+                # ./ser_cli_var_kv \
+                ./ser_cli \
                 --server_ip 192.168.1.51 --num_machine $4 --num_cli $num_cli --num_coro $num_coro \
                 --gid_idx 1 \
                 --max_coro 256 --cq_size 64 \

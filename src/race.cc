@@ -55,7 +55,7 @@ void PrintDir(Directory *dir)
     }
 }
 
-Server::Server(Config &config) : dev("mlx5_0", 1, config.gid_idx), ser(dev)
+Server::Server(Config &config) : dev(nullptr, 1, config.gid_idx), ser(dev)
 {
     lmr = dev.reg_mr(233, config.mem_size);
     alloc.Set((char *)lmr->addr, lmr->length);
