@@ -28,15 +28,15 @@ SepHash is a write-optimized hash index designed for emerging disaggregated memo
 
 - Configuring server/ip information:
     - Edit the list of client-nodes in run.py and sync.sh.
-    - set server's ip in ser_cli.sh
-- Generate executable and copy to all servers
+    - set server's ip in ser_cli.sh.
+- Generate executable and copy to all client nodes.
 
 ```bash
 $ mkdir build 
 $ cd build
 $ cmake ..
 $ make ser_cli
-$ ../sync.sh out #server
+$ ../sync.sh out #client-nodes
 ```
 
 - run servers
@@ -48,11 +48,11 @@ $ ../ser_cli.sh server
 - run clients
 
 ```bash
-$ python3 ../run.py #client-nodes client #client #coroutine
+$ python3 ../run.py #client-nodes client #client-per-node #coroutine-per-client
 ```
 
 - Collecting data
 
 ```bash
-$ ../sync.sh in #server
+$ ../sync.sh in #client-nodes
 ```
