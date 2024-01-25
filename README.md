@@ -27,7 +27,8 @@ SepHash is a write-optimized hash index designed for emerging disaggregated memo
 ### Build
 
 - Configuring server/ip information:
-    - Edit the list of servers in [run.py](http://run.py/) and sync.sh.
+    - Edit the list of client-nodes in run.py and sync.sh.
+    - set server's ip in ser_cli.sh
 - Generate executable and copy to all servers
 
 ```bash
