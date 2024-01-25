@@ -41,13 +41,13 @@ $ ../sync.sh out #server
 - run servers
 
 ```bash
- $ python3 ../run.py #server server 1 1
+$ ../ser_cli.sh server
 ```
 
 - run clients
 
 ```bash
-$ python3 ../run.py #server client #client #coroutine
+$ python3 ../run.py #client-nodes client #client #coroutine
 ```
 
 - Collecting data
