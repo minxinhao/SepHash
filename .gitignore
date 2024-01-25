@@ -1,0 +1,4 @@
+*.txt
+!CMakeLists.txt
+/build
+!*space*.txt
