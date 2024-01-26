@@ -57,14 +57,18 @@ $ python3 ../run.py #client-nodes client #client-per-node #coroutine-per-client
 $ ../sync.sh in #client-nodes
 ```
 
-### WorkLoads and comparison objects
+## WorkLoads and comparison objects
 
-- Modify the parameters in ser_cli.sh to apply different workloads. 
-    - load_num: amount of pre-loaded data.
-    - num_op: amount of operations during run phase.
-    - XXX_frac: ratios of corresponding operations in the run phase, need to sum to 1.0.
-    - pattern_type: different distributions of keys. 0 represents sequential workloads, 1 represents uniformly workloads, 2 represents zipfian workloads, and 3 represents lastest workloads.
-- Modify the called executable in ser_cli.sh to replace different comparison objects.
-    - ser_cli.cc : fixed length KV test
-    - ser_cli_var_kv.cc : variable length KV test
-    - Change the ClientType and ServerType in ser_cli.cc and ser_cli_var_kv.cc to switch between different comparison objects.
+### Workloads
+
+Modify the parameters in ser_cli.sh to apply different workloads. 
+- load_num: amount of pre-loaded data.
+- num_op: amount of operations during run phase.
+- XXX_frac: ratios of corresponding operations in the run phase, need to sum to 1.0.
+- pattern_type: different distributions of keys. 0 represents sequential workloads, 1 represents uniformly workloads, 2 represents zipfian workloads, and 3 represents lastest workloads.
+
+### Comparison
+Modify the called executable in ser_cli.sh to replace different comparison objects.
+- ser_cli.cc : fixed length KV test
+- ser_cli_var_kv.cc : variable length KV test
+- Change the ClientType and ServerType in ser_cli.cc and ser_cli_var_kv.cc to switch between different comparison objects.
