@@ -57,7 +57,7 @@ $ python3 ../run.py #client-nodes client #client-per-node #coroutine-per-client
 $ ../sync.sh in #client-nodes
 ```
 
-### WorkLoads and test objects
+### WorkLoads and comparison objects
 
 - Modify the parameters in ser_cli.sh to apply different workloads. 
     - load_num: amount of pre-loaded data.
