@@ -59,7 +59,7 @@ $ ../sync.sh in #client-nodes
 
 ### WorkLoads and test objects
 
-- Modify the parameters in ser_cli.sh to change different workloads. 
+- Modify the parameters in ser_cli.sh to apply different workloads. 
     - load_num: amount of pre-loaded data.
     - num_op: amount of operation during run phase.
     - XXX_frac: ratios of corresponding operation in the run phase, need to sum to 1.0.
