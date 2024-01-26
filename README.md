@@ -64,7 +64,7 @@ $ ../sync.sh in #client-nodes
     - num_op: amount of operation during run phase.
     - XXX_frac: ratios of corresponding operation in the run phase, need to sum to 1.0.
     - pattern_type: different distributions of keys. 0 represents sequential workloads, 1 represents uniformly workloads, 2 represents zipfian workloads, and 3 represents lastest workloads.
-- Modify the called executable to replace different test objects.
+- Modify the called executable to replace different comparison objects.
     - ser_cli.cc : fixed length KV test
     - ser_cli_var_kv.cc : variable length KV test
-    - Change the ClientType and ServerType in ser_cli.cc and ser_cli_var_kv.cc to switch between different test objects.
+    - Change the ClientType and ServerType in ser_cli.cc and ser_cli_var_kv.cc to switch between different comparison objects.
