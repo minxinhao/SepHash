@@ -61,8 +61,8 @@ $ ../sync.sh in #client-nodes
 
 - Modify the parameters in ser_cli.sh to apply different workloads. 
     - load_num: amount of pre-loaded data.
-    - num_op: amount of operation during run phase.
-    - XXX_frac: ratios of corresponding operation in the run phase, need to sum to 1.0.
+    - num_op: amount of operations during run phase.
+    - XXX_frac: ratios of corresponding operations in the run phase, need to sum to 1.0.
     - pattern_type: different distributions of keys. 0 represents sequential workloads, 1 represents uniformly workloads, 2 represents zipfian workloads, and 3 represents lastest workloads.
 - Modify the called executable to replace different comparison objects.
     - ser_cli.cc : fixed length KV test
